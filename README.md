@@ -1,5 +1,5 @@
-# Intro-To-Python-Programming-Yr2-Semeter1
-Year 2 Semester 1 Introduction To Python Programming Assignment 
+# ICT 201 Introduction to Python Programming 
+ICT 201 Introduction to Python Programming Assignment 
 
 Project Overview:
 
