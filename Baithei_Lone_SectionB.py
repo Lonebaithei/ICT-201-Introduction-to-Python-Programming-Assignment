@@ -55,3 +55,19 @@ print("\n----Student Average Grades----")
 for student_name, student_grades in student_records:
     average_grade = sum(student_grades) / len(student_grades)
     print(f"{student_name}: Average Grade = {average_grade:.2f}")
+
+    # Determine and print the highest and lowest grade for each subject
+print("\n--- Subject Grade Analysis ---")
+
+# Initialize lists to store grades for each subject across all students
+subject_grades_list = [[] for _ in range(num_subjects)]
+
+for student_name, student_grades in student_records:
+    for i in range(num_subjects):
+        subject_grades_list[i].append(student_grades[i])
+
+for i in range(num_subjects):
+    subject_name = subjects[i]
+    highest_grade = max(subject_grades_list[i])
+    lowest_grade = min(subject_grades_list[i])
+    print(f"{subject_name}: Highest Grade = {highest_grade:.2f}, Lowest Grade = {lowest_grade:.2f}")
