@@ -49,3 +49,9 @@ while student_count <= total_students:
 
     # Increment counter to move to next student
     student_count += 1
+
+    # Calculating and displaying average grade for every student
+print("\n----Student Average Grades----")
+for student_name, student_grades in student_records:
+    average_grade = sum(student_grades) / len(student_grades)
+    print(f"{student_name}: Average Grade = {average_grade:.2f}")
