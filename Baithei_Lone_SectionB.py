@@ -71,3 +71,12 @@ for i in range(num_subjects):
     highest_grade = max(subject_grades_list[i])
     lowest_grade = min(subject_grades_list[i])
     print(f"{subject_name}: Highest Grade = {highest_grade:.2f}, Lowest Grade = {lowest_grade:.2f}")
+
+    # A summary displaying student`report
+print("\n--- Student Summary ---")
+for student_name, student_grades in student_records:
+    average_grade = sum(student_grades) / len(student_grades)
+    print(f"Name: {student_name}")
+    print(f"  Grades: {student_grades}")
+    print(f"  Average Grade: {average_grade:.2f}")
+    print("-" * 20) # Separator for readability
