@@ -55,31 +55,31 @@ while student_count <= total_students:
 # For now, we just focus on refactoring the data structure.
 
 # Calculating and displaying average grade for every student
-# print("\n----Student Average Grades----")
-# for student_name, student_grades in student_records:
-#     average_grade = sum(student_grades.values()) / len(student_grades) # Updated to use dict.values()
-#     print(f"{student_name}: Average Grade = {average_grade:.2f}")
+    print("\n----Student Average Grades----")
+    for student_name, student_grades in student_records:
+         average_grade = sum(student_grades.values()) / len(student_grades) # Updated to use dict.values()
+         print(f"{student_name}: Average Grade = {average_grade:.2f}")
 
-#     # Determine and print the highest and lowest grade for each subject
-# print("\n--- Subject Grade Analysis ---")
+     # Determine and print the highest and lowest grade for each subject
+print("\n--- Subject Grade Analysis ---")
 
 # # Initialize dictionaries to store grades for each subject across all students
-# subject_grades_dict = {subject: [] for subject in subjects} # Updated to use a dictionary
+subject_grades_dict = {subject: [] for subject in subjects} # Updated to use a dictionary
 
-# for student_name, student_grades in student_records.items(): # Updated to use dict.items()
-#     for subject, grade in student_grades.items(): # Updated to use dict.items()
-#         subject_grades_dict[subject].append(grade)
+for student_name, student_grades in student_records.items(): # Updated to use dict.items()
+        for subject, grade in student_grades.items(): # Updated to use dict.items()
+            subject_grades_dict[subject].append(grade)
 
-# for subject in subjects:
-#     highest_grade = max(subject_grades_dict[subject])
-#     lowest_grade = min(subject_grades_dict[subject])
-#     print(f"{subject}: Highest Grade = {highest_grade:.2f}, Lowest Grade = {lowest_grade:.2f}")
+for subject in subjects:
+        highest_grade = max(subject_grades_dict[subject])
+        lowest_grade = min(subject_grades_dict[subject])
+        print(f"{subject}: Highest Grade = {highest_grade:.2f}, Lowest Grade = {lowest_grade:.2f}")
 
-#     # A summary displaying student`s report
-# print("\n--- Student Summary ---")
-# for student_name, student_grades in student_records.items(): # Updated to use dict.items()
-#     average_grade = sum(student_grades.values()) / len(student_grades) # Updated to use dict.values()
-#     print(f"Name: {student_name}")
-#     print(f"  Grades: {student_grades}")
-#     print(f"  Average Grade: {average_grade:.2f}")
-#     print("-" * 20) # Separator for readability
+    # A summary displaying student`s report
+print("\n--- Student Summary ---")
+for student_name, student_grades in student_records.items(): # Updated to use dict.items()
+        average_grade = sum(student_grades.values()) / len(student_grades) # Updated to use dict.values()
+        print(f"Name: {student_name}")
+        print(f"  Grades: {student_grades}")
+        print(f"  Average Grade: {average_grade:.2f}")
+        print("-" * 20) # Separator for readability
