@@ -1,11 +1,11 @@
 # subjects that will be graded for each student
-subjects = ["Maths", "English", "Science"]  # List of subject names
+subjects = ["Mathematics", "English", "Science"]  # List of subject names
 
 # Dictionary to store student records with grades as lists
 student_records = {}
 
 def search_student():
-    """Search for a specific student by name and display their grades and averages"""
+    """Search student by name and display their grades and averages"""
     if not student_records:
         print("No students in the system!")
         return
@@ -46,13 +46,13 @@ def search_student():
             except ValueError:
                 print("Invalid input! Please enter a number.")
     else:
-        print(f"\n❌ No students found matching '{search_name}'")
+        print(f"\n No students found matching '{search_name}'")
         print("Available students:", list(student_records.keys()))
 
 def display_student_details(student_name):
-    """Display detailed grade information for a specific student"""
+    """Display students grades information"""
     print(f"\n" + "=" * 60)
-    print(f"📊 STUDENT REPORT: {student_name.upper()}")
+    print(f" STUDENT REPORT: {student_name.upper()}")
     print("=" * 60)
     
     grades_dict = student_records[student_name]
@@ -79,7 +79,7 @@ def display_student_details(student_name):
             # Grade analysis for the subject
             if len(grades_list) > 1:
                 improvement = grades_list[-1] - grades_list[0]
-                trend = "📈 Improving" if improvement > 0 else "📉 Declining" if improvement < 0 else "➡️ Stable"
+                trend = " Improving" if improvement > 0 else " Declining" if improvement < 0 else " Stable"
                 print(f"  Trend: {trend} ({improvement:+.1f} points)")
         else:
             print(f"\n{subject}: No grades available")
@@ -91,7 +91,7 @@ def display_student_details(student_name):
         highest_subject = max(subject_averages.items(), key=lambda x: x[1])
         lowest_subject = min(subject_averages.items(), key=lambda x: x[1])
         
-        print(f"\n🎯 OVERALL PERFORMANCE:")
+        print(f"\n OVERALL PERFORMANCE:")
         print("-" * 30)
         print(f"Overall Average: {overall_avg:.2f}")
         print(f"Total Assessments: {len(all_grades)}")
@@ -100,20 +100,20 @@ def display_student_details(student_name):
         
         # Performance category
         if overall_avg >= 90:
-            performance = "🎉 Excellent"
+            performance = " Excellent"
         elif overall_avg >= 80:
-            performance = "👍 Very Good"
+            performance = " Very Good"
         elif overall_avg >= 70:
-            performance = "✅ Good"
+            performance = " Good"
         elif overall_avg >= 60:
-            performance = "⚠️  Needs Improvement"
+            performance = "  Needs Improvement"
         else:
-            performance = "❌ Poor"
+            performance = " Poor"
             
         print(f"Performance: {performance}")
         
         # Display grade distribution
-        print(f"\n📈 GRADE DISTRIBUTION:")
+        print(f"\n GRADE DISTRIBUTION:")
         grade_categories = {
             "A (90-100)": len([g for g in all_grades if g >= 90]),
             "B (80-89)": len([g for g in all_grades if 80 <= g < 90]),
@@ -127,7 +127,7 @@ def display_student_details(student_name):
             print(f"  {category}: {count} grades ({percentage:.1f}%)")
     
     else:
-        print(f"\n📝 No grades available for {student_name}")
+        print(f"\n No grades available for {student_name}")
 
 def add_student():
     """Add a new student to the system with multiple grades per subject"""
@@ -358,7 +358,7 @@ def view_subject_grades():
             subject_lowest = min(all_grades)
             subject_average = sum(all_grades) / len(all_grades)
             
-            print(f"\n📊 {subject.upper()} CLASS STATISTICS:")
+            print(f"\n {subject.upper()} CLASS STATISTICS:")
             print(f"  Highest grade: {subject_highest:.2f}")
             print(f"  Lowest grade: {subject_lowest:.2f}")
             print(f"  Class average: {subject_average:.2f}")
@@ -460,7 +460,7 @@ def display_menu():
 
 def main():
     print("WELCOME TO STUDENT GRADE MANAGEMENT SYSTEM")
-    print("🔍 Now with advanced student search and detailed reporting!")
+    print(" Now with advanced student search and detailed reporting!")
     
     # Sample data for demonstration (optional)
     sample_data = input("\nWould you like to load sample data for demonstration? (y/n): ").lower()
