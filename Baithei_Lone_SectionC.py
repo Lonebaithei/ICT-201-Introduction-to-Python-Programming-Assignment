@@ -451,7 +451,7 @@ def display_menu():
     print("2. Update student grades")
     print("3. Remove student")
     print("4. Display all students")
-    print("5. Search for student and view detailed report")
+    print("5. Search for student and view their report")
     print("6. View grades for specific subject")
     print("7. Calculate statistics")
     print("8. Show student count and summary")
@@ -459,35 +459,9 @@ def display_menu():
     print("=" * 60)
 
 def main():
-    print("WELCOME TO STUDENT GRADE MANAGEMENT SYSTEM")
-    print(" Now with advanced student search and detailed reporting!")
+    print("GABORONE UNIVERSITY STUDENT GRADE MANAGEMENT SYSTEM")
     
-    # Sample data for demonstration (optional)
-    sample_data = input("\nWould you like to load sample data for demonstration? (y/n): ").lower()
-    if sample_data == 'y':
-        student_records.update({
-            'John Smith': {
-                'Maths': [85, 90, 78],
-                'English': [92, 88, 95],
-                'Science': [78, 85, 92]
-            },
-            'Sarah Johnson': {
-                'Maths': [92, 95, 88],
-                'English': [85, 90, 92],
-                'Science': [90, 92, 88]
-            },
-            'Mike Brown': {
-                'Maths': [75, 80, 82],
-                'English': [78, 85, 80],
-                'Science': [85, 88, 90]
-            },
-            'Emily Davis': {
-                'Maths': [88, 92, 95],
-                'English': [90, 94, 92],
-                'Science': [92, 90, 94]
-            }
-        })
-        print("✓ Sample data loaded with 4 students and multiple grades per subject!")
+    
 
     # Main menu loop
     while True:
