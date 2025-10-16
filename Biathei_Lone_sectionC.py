@@ -1,13 +1,11 @@
-# Initialization of main data structures
 subjects = ["Mathematics", "English", "Science"]
 student_records = {} # Dictionary to store student records
 
-# Initial Print Statement (formerly in main)
 print("GABORONE UNIVERSITY STUDENT GRADE MANAGEMENT SYSTEM")
 
-# Main menu loop (formerly in main)
+# Main menu loop 
 while True:
-    # --- Display Menu Logic (formerly in display_menu) ---
+    # --- Display Menu Logic
     student_count = len(student_records)
     total_grades = 0
     for grades_dict in student_records.values():
@@ -158,7 +156,7 @@ while True:
         for subject, grades in student_records[student_name].items():
             print(f"  {subject}: {grades}")
 
-    # 3. Remove student (logic from remove_student + display logic)
+    # 3. Remove student option
     elif choice == '3':
         if not student_records:
             print("No students in the system!")
@@ -183,7 +181,7 @@ while True:
         else:
             print(f"Student '{student_name}' not found!")
 
-    # 4. Display all students (logic from display_all_students)
+    # 4. Display all students option
     elif choice == '4':
         if not student_records:
             print("No students in the system!")
@@ -214,7 +212,7 @@ while True:
             print(f"  Overall Average: {overall_average:.2f}")
             print("-" * 50)
     
-    # 5. Search for student and view their report (logic from search_student and display_student_details)
+    # 5. Search for student and view their report option
     elif choice == '5':
         # NOTE: This choice is the most complex to refactor without functions
         # because the original code had nested logic (`search_student` calling 
