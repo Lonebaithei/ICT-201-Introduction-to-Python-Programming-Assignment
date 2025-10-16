@@ -274,7 +274,7 @@ while True:
             subject_averages = {}
             all_grades = []
             
-            print(f"\n📝 GRADE BREAKDOWN:")
+            print(f"\n GRADE BREAKDOWN:")
             print("-" * 50)
             
             for subject in subjects:
